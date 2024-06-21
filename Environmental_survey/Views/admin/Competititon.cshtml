@@ -1,0 +1,51 @@
+﻿@model Environmental_survey.Models.competition_
+
+@{
+    ViewData["Title"] = "Competititon";
+    Layout = "~/Views/Shared/header_footer.cshtml";
+}
+
+<h1>Competititon</h1>
+
+<h4>competition_</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Competititon">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Competition_name" class="control-label"></label>
+                <input asp-for="Competition_name" class="form-control" />
+                <span asp-validation-for="Competition_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition_startdate" class="control-label"></label>
+                <input asp-for="Competition_startdate" class="form-control" />
+                <span asp-validation-for="Competition_startdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition_enddate" class="control-label"></label>
+                <input asp-for="Competition_enddate" class="form-control" />
+                <span asp-validation-for="Competition_enddate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition_location" class="control-label"></label>
+                <input asp-for="Competition_location" class="form-control" />
+                <span asp-validation-for="Competition_location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competiton_type" class="control-label"></label>
+                <select asp-for="Competiton_type" class="form-control"></select>
+                <span asp-validation-for="Competiton_type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

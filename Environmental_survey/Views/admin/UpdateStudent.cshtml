@@ -1,0 +1,54 @@
+﻿@model Environmental_survey.Models.Student
+
+@{
+    ViewData["Title"] = "UpdateStudent";
+    Layout = "~/Views/Shared/Dashboard_header_footer.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            <img src="~/dashboard/assets/images/profile/student-logo-73-5759.png" width="100%" height="200px" />
+
+        <form asp-action="UpdateStudent">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+
+                            <input asp-for="Std_Name" class="form-control mt-4" placeholder="Update Student Name...." />
+                <span asp-validation-for="Std_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                            <input asp-for="Std_Roll_NO" class="form-control mt-4" placeholder="Update Student Roll Number...." />
+                <span asp-validation-for="Std_Roll_NO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                            <input asp-for="Std_Class" class="form-control mt-4" placeholder="Update Student Class...." />
+                <span asp-validation-for="Std_Class" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                            <input asp-for="Std_Specification" class="form-control mt-4" placeholder="Update Student Specification...." />
+                <span asp-validation-for="Std_Specification" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                            <input asp-for="Std_Section" class="form-control mt-4" placeholder="Update Student Section...." />
+                <span asp-validation-for="Std_Section" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               
+                <input asp-for="Std_Admission_Date" class="form-control mt-4" placeholder="Update Student Admission Date...." />
+                <span asp-validation-for="Std_Admission_Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update Student" class="btn btn-primary mt-4" />
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+

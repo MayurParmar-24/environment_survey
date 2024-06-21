@@ -1,0 +1,49 @@
+﻿@model Environmental_survey.faculty_
+
+@{
+    ViewData["Title"] = "addFaculty";
+    Layout = "~/Views/Shared/Dashboard_header_footer.cshtml";
+}
+
+
+
+
+<div class="container">
+<div class="row">
+    <div class="col-lg-6 mx-auto">
+            <img src="~/dashboard/assets/images/profile/faculty2.png" width="100%" height="200px" />
+
+        <form asp-action="addFaculty" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                
+                    <input asp-for="Name" class="form-control mt-4" placeholder="Enter Faculty Name...." />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+            
+                    <input asp-for="Email" class="form-control mt-4" placeholder="Enter Faculty Email...." />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+             
+                    <input asp-for="Password" class="form-control mt-4" placeholder="Enter Faculty Password...." />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               
+                    <input asp-for="Education" class="form-control mt-4" placeholder="Enter Faculty Education...." />
+                <span asp-validation-for="Education" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               
+                    <input asp-for="Photo" class="form-control mt-4" rows="8" placeholder="Enter Faculty Image...." />
+                <span asp-validation-for="Photo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                    <input type="submit" value="Add Faculty" class="btn btn-success mt-4" />
+            </div>
+        </form>
+    </div>
+</div>
+</div>

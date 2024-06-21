@@ -1,0 +1,48 @@
+﻿@model Environmental_survey.Models.user
+
+@{
+    ViewData["Title"] = "stdparticipateupdate";
+    Layout = "~/Views/Shared/Dashboard_header_footer.cshtml";
+}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            <img src="~/dashboard/assets/images/profile/PARTICIPATE.png" width="100%" height="200px" />
+        <form asp-action="stdparticipateupdate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+               
+                    <input asp-for="Group_Name" class="form-control mt-4" placeholder="Update Group Name...." />
+                <span asp-validation-for="Group_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+              
+                    <input asp-for="Group_Email" class="form-control mt-4" placeholder="Update Group Email...." />
+                <span asp-validation-for="Group_Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                    <input asp-for="Group_Contact" class="form-control mt-4" placeholder="Update Group Contact...." />
+                <span asp-validation-for="Group_Contact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                    <input asp-for="Group_Address" class="form-control mt-4" placeholder="Update Group Address...." />
+                <span asp-validation-for="Group_Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                    <input asp-for="Num_Of_prpoles" class="form-control mt-4" placeholder="Update Number Of Peoples...." />
+                <span asp-validation-for="Num_Of_prpoles" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-success mt-4" />
+            </div>
+        </form>
+    </div>
+</div>
+</div>

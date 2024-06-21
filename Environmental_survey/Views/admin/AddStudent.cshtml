@@ -1,0 +1,60 @@
+﻿@model Environmental_survey.Models.Student
+
+@{
+    ViewData["Title"] = "AddStudent";
+    Layout = "~/Views/Shared/header_footer.cshtml";
+}
+
+<div class="container">
+<div class="row mt-5">
+        <div class="col-lg-6 card pt-5 mb-5" style="border-radius: 15px; background-color: rgba(255, 255, 255, 0.8);">
+            <center>
+                <h1 class="pb-3">Student Form</h1>
+            </center>
+        <form asp-action="AddStudent">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                    <input asp-for="Std_Name" class="form-control form-control-lg" style="height: 40px;" placeholder="Studnet Name..." />
+                <span asp-validation-for="Std_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                    <input asp-for="Std_Roll_NO" class="form-control form-control-lg" style="height: 40px;" placeholder="Roll Number..." />
+                <span asp-validation-for="Std_Roll_NO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               
+                <input asp-for="Std_Class" class="form-control form-control-lg" style="height: 40px;" placeholder="Class Name..." />
+                <span asp-validation-for="Std_Class" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                    <input asp-for="Std_Specification" class="form-control form-control-lg" style="height: 40px;" placeholder="Specification..." />
+                <span asp-validation-for="Std_Specification" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                    <input asp-for="Std_Section" class="form-control form-control-lg" style="height: 40px;" placeholder="Section..." />
+                <span asp-validation-for="Std_Section" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                    <input asp-for="Std_Admission_Date" class="form-control form-control-lg" style="height: 40px;" placeholder="Date..." />
+                <span asp-validation-for="Std_Admission_Date" class="text-danger"></span>
+            </div>
+                <div class="pt-3 d-flex justify-content-center">
+                <input type="submit" value="Register Your Self!!!" class="btn btn-primary" />
+            </div>
+                <p class="text-center text-muted mt-3 mb-3">
+                    Already Register? <a href="@Url.Action("StudentLogin", "admin")" class="fw-bold text-body"><u>Click here</u></a>
+                </p>
+        </form>
+    </div>
+    <div class="col-lg-6 ">
+        <img src="~/template/assets/img/custom/pexels-tirachard-kumtanom-733856.jpg" width="100%" height="480px" />
+    </div>
+
+        
+</div>
+
+</div>

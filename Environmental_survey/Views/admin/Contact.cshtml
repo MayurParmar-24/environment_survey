@@ -1,0 +1,120 @@
+﻿@model Environmental_survey.Models.contact
+
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/header_footer.cshtml";
+}
+
+
+<!--? Hero Start -->
+<div class="slider-area2">
+    <div class="slider-height2 d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap hero-cap2 pt-70">
+                        <h2>Contact Us</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="@Url.Action("Index","admin")">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Contact Us</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+                   
+<!--Contact Start-->
+<section class="contact-page mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-form">
+                    <h3>Feel Free to Contact us</h3>
+                    <ul class="cform">
+                         <form asp-action="Contact" method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <li class="half pr-15">
+
+                            <input class="form-control" asp-for="Name" name="name" type="text" placeholder="Enter Your Name..." style="height: 45px; font-size: 12px;">
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                           
+                        </li>
+                        <li class="half pl-15">
+
+                            <input class="form-control" asp-for="Email" name="email" type="email" placeholder="Enter Your Email..." style="height: 45px; font-size: 12px;">
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            
+                        </li>
+        
+                        <li class="full">
+
+                            <input class="form-control" asp-for="Subject" name="subject" type="text" placeholder="Enter Your Subject.." style="height: 45px; font-size: 12px;">
+                                <span asp-validation-for="Subject" class="text-danger"></span>
+                            
+                        </li>
+                        <li class="full">
+
+                            <textarea class="form-control" name="message" asp-for="Message" rows="15" placeholder="Enter Your Message..." style="font-size: 12px;"></textarea>
+                                <span asp-validation-for="Message" class="text-danger"></span>
+                          
+                        </li>
+                        <li class="full">
+                            
+                                <button type="submit" class="btn btn-success">Send</button>
+                            
+                        </li>
+                        </form>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="google-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.9026292694525!2d67.02166607520034!3d24.86717497792482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e6b1566c46f%3A0x65318f4eb62c7aa8!2sAptech%20Computer%20Education%20Garden%20Center!5e0!3m2!1sen!2s!4v1702759222269!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container contact-info">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Contact Information</h3>
+            </div>
+            <!--Contact Info Start-->
+            <div class="col-md-4">
+                <div class="c-info">
+                    <h6>Address:</h6>
+                    <p> 4700 Millenia Blvd # 175, Orlando, FL 32839, USA </p>
+                </div>
+            </div>
+            <!--Contact Info End-->
+            <!--Contact Info Start-->
+            <div class="col-md-4">
+                <div class="c-info">
+                    <h6>Contact:</h6>
+                    <p><strong>Phone:</strong> +1 321 2345 678-9</p>
+                    <p><strong>Fax:</strong> +1 321 2345 876-7</p>
+                </div>
+            </div>
+            <!--Contact Info End-->
+            <!--Contact Info Start-->
+            <div class="col-md-4">
+                <div class="c-info">
+                    <h6>For More Information:</h6>
+                    <p><strong>Email:</strong> info@ecova.com</p>
+                    <p>contact@ecova.com</p>
+                </div>
+            </div>
+            <!--Contact Info End-->
+        </div>
+    </div>
+</section>
+
+
+
+

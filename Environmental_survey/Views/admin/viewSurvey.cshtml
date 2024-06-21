@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Environmental_survey.Models.Survey>
+
+@{
+    ViewData["Title"] = "viewSurvey";
+    Layout = "~/Views/Shared/Dashboard_header_footer.cshtml";
+}
+
+
+
+<div class="container">
+    <div class="row">
+
+
+        @foreach (var item in Model)
+        {
+
+            <div class="col-lg-3">
+                <div class="card">
+                    <img src="~/images/@Html.DisplayFor(modelItem => item.SurveyImage)" width="100%" height="200px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h5>
+                        <p class="card-text">@Html.DisplayFor(modelItem => item.Details)</p>
+                        <span><a asp-action="surveyDelete" class="btn btn-danger" asp-route-id="@item.Id">Delete</a></span>
+                        <span><a asp-action="surveyUpdate" class="btn btn-success" asp-route-id="@item.Id">Update</a></span>
+
+                    </div>
+                </div>
+
+            </div>
+        }
+
+    </div>
+</div>

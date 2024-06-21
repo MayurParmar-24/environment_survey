@@ -1,0 +1,47 @@
+﻿@model Environmental_survey.Models.faculty
+
+@{
+    ViewData["Title"] = "FacultyUpdate";
+    Layout = "~/Views/Shared/Dashboard_header_footer.cshtml";
+}
+
+<div class="container">
+<div class="row">
+    <div class="col-lg-6 mx-auto">
+        <form asp-action="FacultyUpdate">
+                <img src="~/dashboard/assets/images/profile/faculty2.png" width="100%" height="200px" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+            
+                    <input asp-for="Name" class="form-control mt-4" placeholder="Update Faculty Name...." />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               
+                    <input asp-for="Email" class="form-control mt-4" placeholder="Update Faculty Email...." />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               
+                    <input asp-for="Password" class="form-control mt-4" placeholder="Update Faculty Password...." />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                    <input asp-for="Education" class="form-control mt-4" placeholder="Update Faculty Education...." />
+                <span asp-validation-for="Education" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+              
+                    <input asp-for="facultyimg" class="form-control mt-4" placeholder="Paste Image Url...." />
+                <span asp-validation-for="facultyimg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update Faculty" class="btn btn-success mt-4" />
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+

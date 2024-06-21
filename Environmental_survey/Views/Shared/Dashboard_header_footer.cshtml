@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Environmental Survey</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
+    <link rel="stylesheet" href="~/dashboard/assets/css/styles.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/dashboard/assets/customcss/customcss.css" />
+</head>
+
+<body>
+    <!-- Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+         data-sidebar-position="fixed" data-header-position="fixed">
+        <!-- Sidebar Start -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+           
+                <div class="brand-logo d-flex align-items-center justify-content-between">
+                    <a href="./index.html" class="text-nowrap logo-img">
+                        <img src="~/dashboard/assets/images/logos/envlogo.jpg" width="100%" alt="" />
+                    </a>
+                    <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+                        <i class="ti ti-x fs-8"></i>
+                    </div>
+                </div>
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+                    <ul id="sidebarnav mt-5">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link active bg-success text-white" href="javascript:void(0)" aria-expanded="true" onclick="toggleHeading('userHeading')">
+                                <span>
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <span class="hide-menu">User</span>
+                            </a>
+                            <ul class="list-unstyled" id="userHeading">
+                                <li class="">
+                                    <a class="sidebar-link" href="@Url.Action("viewSignup","admin")">
+                                        <span class="hide-menu">Signup's Records</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a class="sidebar-link" href="@Url.Action("viewContact","admin")">
+                                        <span class="hide-menu">Contact's Records</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link active bg-success text-white" href="javascript:void(0)" aria-expanded="false" onclick="toggleHeading('surveyHeading')">
+                                <span>
+                                    <i class="fa-solid fa-square-poll-horizontal"></i>
+                                </span>
+                                <span class="hide-menu ">Survey</span>
+                            </a>
+                            <ul class="list-unstyled" id="surveyHeading">
+                                <li class="">
+                                    <a class="sidebar-link" href="@Url.Action("Dashboard","admin")">
+                                        <span class="hide-menu">Add Surveys</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a class="sidebar-link" href="@Url.Action("viewSurvey","admin")">
+                                        <span class="hide-menu">View Surveys</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link active bg-success text-white" href="javascript:void(0)" aria-expanded="true" onclick="toggleHeading('facultayHeading')">
+                                <span>
+                                    <i class="fa-solid fa-user-secret"></i>
+                                </span>
+                                <span class="hide-menu ">Facultay</span>
+                            </a>
+                            <ul class="list-unstyled" id="facultayHeading">
+                                <li class="">
+                                    <a class="sidebar-link" href="@Url.Action("addFaculty","admin")">
+                                        <span class="hide-menu">Add Faculties</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a class="sidebar-link" href="@Url.Action("ViewFaculty","admin")">
+                                        <span class="hide-menu">View Faculties</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link active bg-success text-white" href="javascript:void(0)" aria-expanded="true" onclick="toggleHeading('studentHeading')">
+                                <span>
+                                    <i class="fa-solid fa-users"></i>
+                                </span>
+                                <span class="hide-menu ">Students</span>
+                            </a>
+                            <ul class="list-unstyled" id="studentHeading">
+                                
+                                <li class="">
+                                    <a class="sidebar-link" href="@Url.Action("ViewStudent","admin")">
+                                        <span class="hide-menu">View Students</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link active bg-success text-white" href="javascript:void(0)" aria-expanded="false" onclick="toggleHeading('faqsHeading')">
+                                <span>
+                                <i class="fa-regular fa-circle-question"></i>
+                                </span>
+                                <span class="hide-menu ">FaQs</span>
+                            </a>
+                        <ul class="list-unstyled" id="faqsHeading">
+                                <li class="">
+                                    <a class="sidebar-link" href="@Url.Action("addFaQs","admin")">
+                                        <span class="hide-menu">Add FaQs</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a class="sidebar-link" href="@Url.Action("viewFaQs","admin")">
+                                        <span class="hide-menu">View FaQs</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link active bg-success text-white" href="javascript:void(0)" aria-expanded="false" onclick="toggleHeading('stdHeading')">
+                            <span>
+                                <i class="fa-regular fa-handshake"></i>
+                            </span>
+                            <span class="hide-menu ">Student Participate</span>
+                        </a>
+                        <ul class="list-unstyled" id="stdHeading">
+                            <li class="">
+                                <a class="sidebar-link" href="@Url.Action("stdfetch","admin")">
+                                    <span class="hide-menu">View Students Participate</span>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </li>
+                    </ul>
+                </nav>
+               
+                <!-- End Sidebar navigation -->
+          
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- Sidebar End -->
+        <!-- Main wrapper -->
+        <div class="body-wrapper">
+            <!-- Header Start -->
+            <header class="app-header">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <ul class="navbar-nav">
+                        <li class="nav-item d-block d-xl-none">
+                            <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                                <i class="ti ti-menu-2"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                                <i class="ti ti-bell-ringing"></i>
+                                <div class="notification bg-primary rounded-circle"></div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+                        <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <img src="~/dashboard/assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                                    <div class="message-body">
+                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                                            <i class="ti ti-user fs-6"></i>
+                                            <p class="mb-0 fs-3">My Profile</p>
+                                        </a>
+                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                                            <i class="ti ti-mail fs-6"></i>
+                                            <p class="mb-0 fs-3">My Account</p>
+                                        </a>
+                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                                            <i class="ti ti-list-check fs-6"></i>
+                                            <p class="mb-0 fs-3">My Task</p>
+                                        </a>
+                                        <a href="@Url.Action("Index","admin")" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-- Header End -->
+            <div class="container-fluid">
+                <!-- Row 1 -->
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <script src="~/dashboard/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="~/dashboard/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/dashboard/assets/js/sidebarmenu.js"></script>
+    <script src="~/dashboard/assets/js/app.min.js"></script>
+    <script src="~/dashboard/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="~/dashboard/assets/libs/simplebar/dist/simplebar.js"></script>
+    <script src="~/dashboard/assets/js/Dashboard.js"></script>
+
+    
+
+    <script>
+        $(document).ready(function () {
+            // Initially hide all submenus
+            $('.list-unstyled').hide();
+
+            // Attach click event handlers to all heading links
+            $('.sidebar-link[aria-expanded]').click(function () {
+                // Toggle the visibility of the submenus under the clicked heading
+                $(this).siblings('ul.list-unstyled').slideToggle();
+            });
+        });
+    </script>
+
+  
+
+
+</body>
+
+</html>

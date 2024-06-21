@@ -1,0 +1,39 @@
+﻿@model Environmental_survey.Models.register
+
+@{
+    ViewData["Title"] = "signupUpdate";
+    Layout = "~/Views/Shared/Dashboard_header_footer.cshtml";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            <img src="~/dashboard/assets/images/profile/signuo.png" width="100%" height="200px" />
+        <form asp-action="signupUpdate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                
+                <input asp-for="Name" class="form-control mt-4" placeholder="Updtae Signup Name....."/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                    <input asp-for="Email" class="form-control mt-4" placeholder="Updtae Signup Email....." />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                    <input asp-for="Password" class="form-control mt-4" placeholder="Updtae Signup Password....." />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update Signup Record" class="btn btn-primary mt-4" />
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+

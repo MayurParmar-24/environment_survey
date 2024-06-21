@@ -1,0 +1,47 @@
+﻿@model Environmental_survey.Models.user
+
+@{
+    ViewData["Title"] = "studentparticipate";
+    Layout = "~/Views/Shared/User.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            <img src="~/dashboard/assets/images/profile/PARTICIPATE.png" width="100%" height="200px" />
+        <form asp-action="studentparticipate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+
+                    <input asp-for="Group_Name" class="form-control mt-4" placeholder="Enter Group Name...." />
+                <span asp-validation-for="Group_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                    <input asp-for="Group_Email" class="form-control mt-4" placeholder="Enter Group Email...." />
+                <span asp-validation-for="Group_Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                    <input asp-for="Group_Contact" class="form-control mt-4" placeholder="Enter Group Contact...." />
+                <span asp-validation-for="Group_Contact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                    <input asp-for="Group_Address" class="form-control mt-4" placeholder="Enter Group Address...." />
+                <span asp-validation-for="Group_Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                    <input asp-for="Num_Of_prpoles" class="form-control mt-4" placeholder="Enter Number Of Peoples...." />
+                    <span asp-validation-for="Num_Of_prpoles" class="text-danger" ></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add Participation" class="btn btn-primary mt-4" />
+            </div>
+        </form>
+    </div>
+</div>
+
+</div>
+

@@ -1,0 +1,57 @@
+﻿@model Environmental_survey.Models.register
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/header_footer.cshtml";
+}
+
+
+
+<section class="vh-100 bg-image" id="envreg"
+         style="background-image:url('https://cdn.pixabay.com/photo/2014/04/17/23/26/environmental-protection-326923_1280.jpg'); background-repeat:no-repeat;
+background-size: 100% 100%; height:600px;">
+    <div class="mask d-flex align-items-center h-100 ">
+        <div class="container h-100 mt-5 mb-5">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="card" style="border-radius: 15px; background-color: rgba(255, 255, 255, 0.8);">
+                        <div class="card-body p-5">
+                            <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+                            <form asp-action="Register">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1cg">Your Name</label>
+                                    <input asp-for="Name" type="text" id="form3Example1cg" class="form-control form-control-lg" style="height: 50px;" placeholder="Enter Your Name..." />
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Your Email</label>
+                                    <input asp-for="Email" type="email" id="form3Example3cg" class="form-control form-control-lg" style="height: 50px;" placeholder="Enter Your Email..." />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example4cg">Your Password</label>
+                                    <input asp-for="Password" type="password" id="form3Example4cg" class="form-control form-control-lg" style="height: 50px;" placeholder="Enter Your Password..." />
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+
+                                <div class="d-flex justify-content-center">
+                                    <input type="submit" value="Register" class="btn btn-primary" />
+                                </div>
+
+                                <p class="text-center text-muted mt-5 mb-0">
+                                    Already have an account? <a href="@Url.Action("login", "admin")" class="fw-bold text-body"><u>Login here</u></a>
+                                </p>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

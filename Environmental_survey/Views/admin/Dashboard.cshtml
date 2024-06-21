@@ -1,0 +1,44 @@
+﻿@model Environmental_survey.survey_
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/Dashboard_header_footer.cshtml";
+}
+<style>
+    textarea
+    {
+        resize:none;
+    }
+</style>
+<div class="container">
+    <div class="row">
+  
+
+     
+            <div class="col-lg-6 mx-auto  ">
+            <img src="~/dashboard/assets/images/profile/survey2.jpg" width="100%" height="200px" />
+                <form asp-action="addSurvey" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <input asp-for="Title" placeholder="Enter survey Title...." class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <textarea asp-for="Details" class="form-control mt-3" rows="8" placeholder="Enter Survey Details...."></textarea>
+                    
+                    <span asp-validation-for="Details" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="Photo" class="form-control mt-3 " />
+                    <span asp-validation-for="Photo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Add Survey" class="btn btn-success mt-3" />
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</div>
+</section>
+
+

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Environmental_survey.Models.Student>
+
+@{
+    ViewData["Title"] = "ViewStudent";
+    Layout = "~/Views/Shared/Dashboard_header_footer.cshtml";
+}
+
+<div class="container">
+    <table class="table table-striped table-hover table-bordered border-dark">
+        <thead>
+    <thead>
+            <tr class="table-active">
+            <th>
+                @Html.DisplayNameFor(model => model.Std_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Std_Roll_NO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Std_Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Std_Specification)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Std_Section)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Std_Admission_Date)
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Std_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Std_Roll_NO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Std_Class)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Std_Specification)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Std_Section)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Std_Admission_Date)
+            </td>
+            <td>
+                        <a asp-action="UpdateStudent" class="btn btn-success" asp-route-id="@item.Id">Update</a> |
+                    <a asp-action="DeleteStudent" class="btn btn-danger" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
